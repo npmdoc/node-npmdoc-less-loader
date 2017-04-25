@@ -1,6 +1,6 @@
 # npmdoc-less-loader
 
-#### api documentation for  less-loader (v4.0.3)  [![npm package](https://img.shields.io/npm/v/npmdoc-less-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-less-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-less-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-less-loader)
+#### basic api documentation for  [less-loader (v4.0.3)](https://github.com/webpack-contrib/less-loader#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-less-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-less-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-less-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-less-loader)
 
 #### Less loader for webpack. Compiles Less to CSS.
 
@@ -21,46 +21,18 @@
 ```json
 
 {
-    "name": "less-loader",
-    "version": "4.0.3",
-    "author": "Johannes Ewald @jhnns",
-    "description": "Less loader for webpack. Compiles Less to CSS.",
-    "main": "dist/index.js",
-    "scripts": {
-        "create-spec": "babel-node test/helpers/createSpec.js",
-        "pretest": "npm run create-spec",
-        "test": "jest",
-        "posttest": "npm run lint",
-        "travis:test": "yarn run test",
-        "appveyor:test": "npm test",
-        "lint": "eslint --cache src test",
-        "webpack-defaults": "webpack-defaults",
-        "start": "yarn run serve:dev src",
-        "build": "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
-        "clean:dist": "del-cli dist",
-        "lint-staged": "lint-staged",
-        "prebuild": "yarn run clean:dist",
-        "prepublish": "yarn run build",
-        "release": "yarn run standard-version",
-        "security": "nsp check",
-        "serve:dev": "nodemon $2 --exec babel-node",
-        "test:watch": "jest --watch",
-        "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
-        "travis:coverage": "yarn run test:coverage",
-        "travis:lint": "yarn run lint && yarn run security"
+    "author": {
+        "name": "Johannes Ewald @jhnns"
     },
-    "engines": {
-        "node": ">=4.3 <5.0.0 || >=5.10"
+    "bugs": {
+        "url": "https://github.com/webpack-contrib/less-loader/issues"
     },
     "dependencies": {
         "clone": "^2.1.1",
         "loader-utils": "^1.1.0",
         "pify": "^2.3.0"
     },
-    "peerDependencies": {
-        "less": "^2.3.1",
-        "webpack": "^2.2.0"
-    },
+    "description": "Less loader for webpack. Compiles Less to CSS.",
     "devDependencies": {
         "babel-cli": "^6.24.0",
         "babel-jest": "^19.0.0",
@@ -83,23 +55,85 @@
         "webpack": "^2.3.2",
         "webpack-defaults": "^0.4.5"
     },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/webpack-contrib/less-loader.git"
+    "directories": {},
+    "dist": {
+        "shasum": "d1e6462ca2f090c11248455e14b8dda4616d0521",
+        "tarball": "https://registry.npmjs.org/less-loader/-/less-loader-4.0.3.tgz"
     },
-    "license": "MIT",
+    "engines": {
+        "node": ">=4.3 <5.0.0 || >=5.10"
+    },
     "files": [
         "README.md",
         "LICENSE",
         "dist"
     ],
-    "pre-commit": "lint-staged",
+    "gitHead": "e8b7d48a43ebbe82a818efa33efdb6fcf36c4a61",
+    "homepage": "https://github.com/webpack-contrib/less-loader#readme",
+    "license": "MIT",
     "lint-staged": {
         "*.js": [
             "eslint --fix",
             "git add"
         ]
-    }
+    },
+    "main": "dist/index.js",
+    "maintainers": [
+        {
+            "name": "bebraw"
+        },
+        {
+            "name": "d3viant0ne"
+        },
+        {
+            "name": "ericclemmons"
+        },
+        {
+            "name": "jhnns"
+        },
+        {
+            "name": "sokra"
+        },
+        {
+            "name": "thelarkinn"
+        }
+    ],
+    "name": "less-loader",
+    "optionalDependencies": {},
+    "peerDependencies": {
+        "less": "^2.3.1",
+        "webpack": "^2.2.0"
+    },
+    "pre-commit": "lint-staged",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/webpack-contrib/less-loader.git"
+    },
+    "scripts": {
+        "appveyor:test": "npm test",
+        "build": "cross-env NODE_ENV=production babel -s true src -d dist --ignore 'src/**/*.test.js'",
+        "clean:dist": "del-cli dist",
+        "create-spec": "babel-node test/helpers/createSpec.js",
+        "lint": "eslint --cache src test",
+        "lint-staged": "lint-staged",
+        "posttest": "npm run lint",
+        "prebuild": "yarn run clean:dist",
+        "prepublish": "yarn run build",
+        "pretest": "npm run create-spec",
+        "release": "yarn run standard-version",
+        "security": "nsp check",
+        "serve:dev": "nodemon $2 --exec babel-node",
+        "start": "yarn run serve:dev src",
+        "test": "jest",
+        "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage",
+        "test:watch": "jest --watch",
+        "travis:coverage": "yarn run test:coverage",
+        "travis:lint": "yarn run lint && yarn run security",
+        "travis:test": "yarn run test",
+        "webpack-defaults": "webpack-defaults"
+    },
+    "version": "4.0.3",
+    "bin": {}
 }
 ```
 
